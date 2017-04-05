@@ -2,6 +2,8 @@ import pygame, sys, math
 from pygame.locals import *
 from math import atan2, degrees, pi
 
+
+# some simple vector helper functions, stolen from http://stackoverflow.com/a/4114962/142637
 def magnitude(v):
     return math.sqrt(sum(v[i]*v[i] for i in range(len(v))))
 
@@ -81,16 +83,6 @@ class Ship(object):
         for event in pygame.event.get():
             if event.type == QUIT:
                 continuer = 0
-            if event.type == KEYDOWN:
-                if event.key == K_DOWN:
-                    positionCanonY += 3
-                     
-                elif event.key == K_UP:
-                    positionCanonY -= 3
-                elif event.key == K_RIGHT:
-                    positionCanonX += 3
-                elif event.key == K_LEFT:
-                    positionCanonX -= 3
             if event.type == MOUSEMOTION:
                 self.positionViseurX = event.pos[0]-19
                 self.positionViseurY = event.pos[1]-19
