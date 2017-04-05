@@ -1,5 +1,5 @@
 # Simple-Pygame-move
-Simple move object for basic game and click
+Simple move object for basic game on click
 
 Requirement 
 - Pygame  
