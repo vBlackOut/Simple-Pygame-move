@@ -2,8 +2,6 @@ import pygame, sys, math
 from pygame.locals import *
 from math import atan2, degrees, pi
 
-
-# some simple vector helper functions, stolen from http://stackoverflow.com/a/4114962/142637
 def magnitude(v):
     return math.sqrt(sum(v[i]*v[i] for i in range(len(v))))
 
